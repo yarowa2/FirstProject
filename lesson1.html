@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+       var arr = [100,25,72,4,3,3,2,];
+       var min = arr[0];
+       var counter = 0;
+       var skip =0;
+       
+       for(i=1;i<arr.length;i++){
+           if (arr[i]<min) {
+               counter++;
+               min = arr[i];
+               console.log("changed");
+           }else{
+               skip++;
+               
+           }
+       }
+       if(skip>counter){
+           console.log("Sorted");
+           
+       }else if(counter>skip){
+           console.log("Unsorted");
+    
+       }else{
+           console.log("OMG");
+           
+       }
+       
+       console.log("min = " + min);
+       console.log("Count -" + counter);
+       console.log("Skip -" + skip);
+    </script> 
+</body>
+</html>
