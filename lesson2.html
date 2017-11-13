@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var hours = 20;
+        var min = 40;
+        var radius = 360;
+        var OneHour = radius/12;            
+        var OneMinute = radius/60;
+        var AccuracyMin = OneHour/60*min;
+        var AngleHour = 0;
+        if(hours > 12){
+            hours = hours - 12;
+        }
+        
+        AngleHour = hours*OneHour+AccuracyMin;
+        
+        var AngleMin = min*OneMinute;
+        var result;
+        
+        console.log(AngleHour + " " + AngleMin);
+        
+        if(AngleHour>AngleMin){
+            result = AngleHour - AngleMin; 
+        }else{
+            result = AngleMin - AngleHour;
+        }
+        console.log("result" + result);
+        
+        
+        
+        
+    
+    
+    </script>
+</body>
+</html>
